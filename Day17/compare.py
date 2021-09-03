@@ -14,6 +14,8 @@ print()
 print(x == 10)  # true
 print(x == y)   # false
 print(x != y)   # true
+print(x is y)   # false
+print(x is not y)   # true
 print()
 
 # 논리 연산자
