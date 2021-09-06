@@ -17,5 +17,5 @@ for i in range(0, row_num):
         seat_num = i*col_num+j
         if seat_num > customer:
             break
-        print(seat_num, end = '')
+        print("좌석", str(seat_num), end = ' ')
     print()
