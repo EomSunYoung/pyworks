@@ -12,6 +12,7 @@ print(score[0:3])   # 0 ~ 2(3-1)
 print(score[:3])    # 0 ~ 2
 print(score[1:4])   # 1 ~ 3
 print(score[2:])    # 2번 인덱스 ~ 끝
+print('='*20)
       
 # 값으로 출력
 for i in score:
@@ -30,3 +31,8 @@ print('\n' + '='*20)
 for i in score:
     if i % 2 == 1:
         print(i, end=' ')
+print()
+print(score)
+del score[0]    # 삭제
+score[1] = 100  # 수정
+print(score)
