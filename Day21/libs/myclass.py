@@ -1,6 +1,7 @@
 # 학생 클래스
 class Student:
     def __init__(self, name, grade):
+        print("객체를 생성합니다.")
         self.name = name
         self.grade = grade
 

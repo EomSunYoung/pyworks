@@ -9,3 +9,8 @@ print("차량2 " + car2.model + '\t' + car2.color + '\t' + str(car2.cc))
 
 s1 = Student("콩쥐", 3)
 print(s1)
+s1.learn()
+s2 = Student("팥쥐", 2)
+print(s2)
+s2.learn()
+

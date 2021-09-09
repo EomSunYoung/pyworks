@@ -1,4 +1,4 @@
-from libs import food1
+from libs import food
 
-food1.cook()
-food1.eat()
+food.cook()
+food.eat()
