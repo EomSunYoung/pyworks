@@ -18,4 +18,3 @@ t.circle(50)    # 반지름이 50px
 
 t.mainloop()
 
-    
