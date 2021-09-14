@@ -22,4 +22,4 @@ while True:
         else:
             print("너무 작아요.")
      except ValueError:
-         print("잘못 입력했습니다. 다시 입력해주세요.")
+         print("숫자를 입력해 주세요.")

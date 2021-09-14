@@ -10,7 +10,6 @@ import random
 import time
 
 word = ['sky', 'earth', 'moon', 'flower', 'tree', 'strawberry', 'grape', 'garlic', 'onion', 'potato']
-
 n = 1   # 문제 1번
 
 print("[타자 게임] 준비되면 엔터!")
