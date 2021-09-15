@@ -5,10 +5,10 @@ d2 = [
 ]
 
 # 인덱싱
-print(d2[0][0])
-print(d2[0][1])
-print(d2[1][0])
-print(d2[1][1])
+print(d2[0][0])     # 10
+print(d2[0][1])     # 20
+print(d2[1][0])     # 30
+print(d2[1][1])     # 40
 
 # 모든 값 전체 출력
 for x, y in d2:
@@ -23,11 +23,11 @@ for i in d1:
     print(i)
 
 # 추가
-d1.append(40)
+d1.append(40)   # [10, 20, 30, 40]
 print(d1)
 
 # 20을 삭제
-d1.remove(20)
+d1.remove(20)   # [10, 30, 40]
 print(d1)
 
 print(len(d1))  # 3
@@ -36,7 +36,7 @@ print(len(d1))  # 3
 sum_v = 0
 for i in d1:
     sum_v += i
-avg = sum_v / len(d1)
+avg = sum_v / len(d1)   # 80/3
 print("합계 :", sum_v)
 print("평균 : %.2f" % avg)
 
