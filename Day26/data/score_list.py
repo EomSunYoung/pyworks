@@ -8,6 +8,15 @@ score = [
     [85, 70]
 ]
 
+# 리스트 추가
+score.append([90, 80])
+print(score)
+
+for x, y in score:
+    print(x, y)
+
+print()
+
 # 합계와 평균
 sum_kor = 0
 sum_math = 0
