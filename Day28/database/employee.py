@@ -1,5 +1,6 @@
 # employee 테이블 관리
 from Day28.libs.dbconn import getconn
+# import sqlite3
 
 # 전체 자료 검색
 def select_data():
