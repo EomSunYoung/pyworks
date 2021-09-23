@@ -6,7 +6,7 @@ from Day28.libs.dbconn import getconn
 def select_data():
     conn = getconn()
     cur = conn.cursor()     # cur : 모든 작업을 하는 객체
-    sql = "SELECT * FROM employee"
+    sql = "SELECT * FROM employee ORDER BY salary DESC"
     cur.execute(sql)        # 데이터베이스에서 sql 문을 실행
     rs = cur.fetchall()     # 데이터베이스에서 가져온 모든 자료 기억(ResultSet)
     for i in rs:
@@ -17,8 +17,10 @@ def select_data():
 def insert_data():
     conn = getconn()
     cur = conn.cursor()
-    sql = "INSERT INTO employee VALUES (?, ?, ?, ?)"
-    cur.execute(sql, ('e1005', '박인비', 33, 15000))   # 동작 바인딩 방식
+    sql = "INSERT INTO employee VALUES ('e2001', '흥부', 31, 1000)"
+    cur.execute(sql)
+    # sql = "INSERT INTO employee VALUES (?, ?, ?, ?)"
+    # cur.execute(sql, ('e1005', '박인비', 33, 15000))   # 동작 바인딩 방식
     conn.commit()   # 삽입, 수정, 삭제시는 반드시 명시해야 함
     conn.close()
 
@@ -52,7 +54,7 @@ def select_one():
 
 if __name__ == "__main__":
     # delete_data()
-    # insert_data()
+    insert_data()
     # update_data()
-    # select_data()
-    select_one()
+    select_data()
+    # select_one()
