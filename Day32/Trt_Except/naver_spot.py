@@ -6,10 +6,12 @@ from bs4 import BeautifulSoup
 def getprice():
     url = request.urlopen("https://finance.naver.com/item/main.naver?code=005930")
     html = BeautifulSoup(url, 'html.parser')
-    content = html.find('p', {'class': 'no_today'})
+    # content = html.find('p', {'class': 'no_today'})
+    content = html.select_one('p.no_today')  # 태그 이름.클래스 이름
     # print(no_today)
     return content
 
 content = getprice()
-price = content.find('span', {'class': 'blind'})
+# price = content.find('span', {'class': 'blind'})
+price = content.select_one('span.blind')
 print("삼성전자 주가 : {}원".format(price.text))
