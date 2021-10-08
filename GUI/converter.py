@@ -1,15 +1,15 @@
-from tkinter import *
+# 온도 변환기
 
-class App:
-    def __init__(self, root):
-        frame = Frame(root)
-        frame.pack()
+class Converter:
+    def __init__(self, units_from, units_to, factor, offset):
+        self.units_from = units_from
+        self.units_to = units_to
+        self.factor = factor
+        self.offset = offset
 
-        Label(frame, text="deg C").grid(row=0, column=0)
-        Button(frame, text="변환").grid(row=1, columnspan=2)
+    def convert(self, val):
+        return self.factor * val + self.offset
 
-root = Tk()
-root.title("Temp Converter")
-app = App(root)
-
-root.mainloop()
+if __name__ == "__main__":
+    c1 = Converter("C", "F", 1.8, 32)
+    print(str(c1.convert(20)) + c1.units_to)
