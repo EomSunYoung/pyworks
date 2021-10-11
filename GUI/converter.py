@@ -12,4 +12,4 @@ class Converter:
 
 if __name__ == "__main__":
     c1 = Converter("C", "F", 1.8, 32)
-    print(str(c1.convert(20)) + c1.units_to)
+    print(str(c1.convert(24)) + c1.units_to)
