@@ -2,13 +2,18 @@
 from tkinter import *
 
 def click(key):
-    display.insert(END, key)
-    if key == '=':
-        value = eval(display.get())
-        result = str(value)
-        display.insert(END, '=' + result)
-    # elif key == 'C':
-    #     display.delete(0, END)
+    if key == 'C':
+        display.delete(0, END)    # 첫 번째 문자 (0,0 = 첫 줄, 첫 문자)
+    elif key == '=':
+        try:
+            value = eval(display.get())    # 계산된 숫자
+            result = str(value)[0:6]    # 출력할 때 문자로 변환
+            display.insert(END, '=' + result)
+        except:
+            display.insert(END, '-->오류')
+    else:
+        display.insert(END, key)
+
 
 root = Tk()
 root.title("나의 계산기")
